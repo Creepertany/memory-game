@@ -1,76 +1,95 @@
 <!DOCTYPE html>
-<html >
-  <head>
+<html>
 
-  
-      <meta charset = "UTF-8">
-      <meta name = "voewport"
-            content = "width=device-width, initial-scale=2.0">
-    <title> Memory Game </title>
-    <link  rel= "stylesheet" href="style.css "/>
+<head>
 
-  </head>
-  
-  <body>
-  <div class = "wrapper">
-      <h1> Memory Game </h1>
-      <ul class = "cards">
-        <li class = "card">
-          <div class ="view back-view">🍎</div>
-          <div class="view front-view">?</div>  
-        </li>
-    
-        <li class = "card">
-          <div class ="view back-view">🍎</div>
-          <div class="view front-view">?</div> 
-        </li>
-        <li class = "card">
-          <div class ="view back-view">🍏​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">🍏​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">🥝​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">​🍉​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">​🍉​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">🍍​</div>
-          <div class="view front-view">?</div>
-          <li class = "card">
-          <div class ="view back-view">🍍​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">🌽​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">🌽​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">🍓​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">🍓​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">🍒​</div>
-          <div class="view front-view">?</div> 
-        </li><li class = "card">
-          <div class ="view back-view">🍒​</div>
-          <div class="view front-view">?</div> 
-          <li class = "card">
-          <div class ="view back-view">🥝​</div>
-          <div class="view front-view">?</div> 
-        </li>
-        </ul>
+
+  <meta charset="UTF-8">
+  <meta name="voewport" content="width=device-width, initial-scale=2.0">
+  <title> Memory Game </title>
+  <link rel="stylesheet" href="style.css " />
+
+</head>
+
+<body>
+  <div class="player-info">
+    <div id="p1" class="player"> Player 1:<div id="score1">0 </div>
     </div>
+    <div class="current">Current Turn:Player <div id="currentPlayer">1</div>
+    </div>
+    <div id="p2" class="player"> Player 2:<div id="score2">0</div>
+    </div>
+  </div>
+  <div>
+  <div class="wrapper">
+    <h1> Memory Game </h1>
+    <ul class="cards">
+      <li class="card">
+        <div class="view back-view">🍎</div>
+        <div class="view front-view">?</div>
+      </li>
 
+      <li class="card">
+        <div class="view back-view">🍎</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">🍏​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">🍏​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">🥝​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">​🍉​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">​🍉​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">🍍​</div>
+        <div class="view front-view">?</div>
+      <li class="card">
+        <div class="view back-view">🍍​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">🌽​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">🌽​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">🍓​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">🍓​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">🍒​</div>
+        <div class="view front-view">?</div>
+      </li>
+      <li class="card">
+        <div class="view back-view">🍒​</div>
+        <div class="view front-view">?</div>
+      <li class="card">
+        <div class="view back-view">🥝​</div>
+        <div class="view front-view">?</div>
+      </li>
+    </ul>
+</div>
     <script src="scirpt.js"></script>
-  </body>
-</html>     
-    
+</body>
+
+</html>

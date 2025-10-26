@@ -2,6 +2,17 @@ let matchedPairs = 0;
 let cardOne = null;
 let cardTwo = null;
 let disableDeck = false;
+let player1score = 0;
+let player2score = 0;
+let currentPlayer = 1;
+
+
+function Update_Info(){
+   document.getElementById("score1").textContent= player1score;
+  document.getElementById("score2").textContent= player2score;
+    document.getElementById("currentPlayer").textContent= currentPlayer;
+
+}
 const audio1 = new Audio("victory-chime-366449.mp3")
 const cards = document.querySelectorAll(".card");
 
@@ -38,6 +49,11 @@ function checkMatch() {
         resetGame();
       }, 500);
     }
+    if (currentPlayer === 1) {
+      player1score++;
+    } else{
+      player2score++;
+    }
     cardOne.removeEventListener("click", flipCard);
     cardTwo.removeEventListener("click", flipCard);
     resetCards();
@@ -47,8 +63,17 @@ function checkMatch() {
       cardTwo.classList.remove("flip");
       resetCards();
     }, 1000);
+    if (currentPlayer === 1) {
+      currentPlayer = 2;
+    }
+  else {
+      (currentPlayer === 2) 
+        currentPlayer = 1;
+      }
   }
+  Update_Info();
 }
+
 function resetCards() {
   cardOne = null;
   cardTwo = null;
@@ -62,6 +87,7 @@ function shuffleCards() {
   document.querySelectorAll(".card .back-view").forEach((back, i) => {
     back.textContent = duplicateEmojis[i];
   });
+  Update_Info();
 }
 function resetGame() {
   matchedPairs = 0;
