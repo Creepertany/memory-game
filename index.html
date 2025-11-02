@@ -13,14 +13,16 @@
 
 <body>
   <div class="player-info">
-    <div id="p1" class="player"> Player 1:<div id="score1">0 </div>
+    <div id="p1" class="player"><img src="gon.jpeg" class="image_icon">  Player 1:<div id="score1">0 </div>
     </div>
     <div class="current">Current Turn:Player <div id="currentPlayer">1</div>
     </div>
-    <div id="p2" class="player"> Player 2:<div id="score2">0</div>
+    <div id="p2" class="player"><img src="killua.jpeg"class="image_icon" > Player 2:<div id="score2">0</div>
     </div>
   </div>
-  <div>
+  <div class="Winner"> 
+    <h4>Congratulation Player <span class="Winner_player">1</span>  You won with <span class="score_winner">0</span>  points</h4>
+  </div>
   <div class="wrapper">
     <h1> Memory Game </h1>
     <ul class="cards">
@@ -89,6 +91,7 @@
       </li>
     </ul>
 </div>
+<button id="resetBtn"> Reset Game </button>
     <script src="scirpt.js"></script>
 </body>
 

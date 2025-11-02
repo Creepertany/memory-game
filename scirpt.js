@@ -5,13 +5,13 @@ let disableDeck = false;
 let player1score = 0;
 let player2score = 0;
 let currentPlayer = 1;
-
+let winnerPlayer = null;
+let winnerscore = null;
 
 function Update_Info(){
-   document.getElementById("score1").textContent= player1score;
+  document.getElementById("score1").textContent= player1score;
   document.getElementById("score2").textContent= player2score;
-    document.getElementById("currentPlayer").textContent= currentPlayer;
-
+  document.getElementById("currentPlayer").textContent= currentPlayer;
 }
 const audio1 = new Audio("victory-chime-366449.mp3")
 const cards = document.querySelectorAll(".card");
@@ -72,6 +72,10 @@ function checkMatch() {
       }
   }
   Update_Info();
+  declareWinner();
+  if (matchedPairs === 8){
+    showWinCard();
+  }
 }
 
 function resetCards() {
@@ -88,13 +92,37 @@ function shuffleCards() {
     back.textContent = duplicateEmojis[i];
   });
   Update_Info();
-}
+}  
 function resetGame() {
   matchedPairs = 0;
   document.querySelectorAll(".card").forEach(card => {
     card.classList.remove("flip");
     card.addEventListener("click", flipCard);
   });
+}
+
+function declareWinner(){
+  if (player1score > player2score){
+    winnerPlayer = 1;
+    winnerscore = player1score;
+  } else if (player2score > player1score){
+    winnerPlayer = 2;
+    winnerscore = player2score;
+  } else {
+    winnerPlayer =0;
+  }
+}
+
+function showWinCard(){
+  const winnerDiv = document.querySelector(".Winner");
+  const winnerPlayerSpan = document.querySelector(".Winner_player");
+  const scoreWinnerSpan = document.querySelector(".score_winner")
+
+  winnerPlayerSpan.textContent = winnerPlayer;
+  scoreWinnerSpan.textContent = winnerscore;
+
+  // winnerDiv.style.display = "flex";
+  winnerDiv.classList.add("show");
 }
 
 window.addEventListener("DOMContentLoaded", shuffleCards);
