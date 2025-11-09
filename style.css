@@ -115,3 +115,35 @@ body {
   justify-content: center !important;
   align-items: center !important;
 }
+.input_names{ 
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+}
+.input_content{
+  background:red;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#startBtn{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #6563FF;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+#player1, #player2{
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1em;
+}
