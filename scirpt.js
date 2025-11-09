@@ -8,6 +8,17 @@ let currentPlayer = 1;
 let winnerPlayer = null;
 let winnerscore = null;
 
+
+function getPlayerNames(){
+  const player1Inut = document.getElementById("player1").value;
+  const player2Input = document.getElementById("player2").value;
+  document.getElementById("player1").textContent= player1name;
+  document.getElementById("player2").textContent= player2name;
+}
+
+document.getElementById("startBtn").addEventListener("click", getPlayerNames)
+
+
 function Update_Info(){
   document.getElementById("score1").textContent= player1score;
   document.getElementById("score2").textContent= player2score;
