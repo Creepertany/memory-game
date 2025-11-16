@@ -8,16 +8,16 @@ let currentPlayer = 1;
 let winnerPlayer = null;
 let winnerscore = null;
 
-
 function getPlayerNames(){
   const player1Inut = document.getElementById("player1").value;
   const player2Input = document.getElementById("player2").value;
-  document.getElementById("player1").textContent= player1name;
-  document.getElementById("player2").textContent= player2name;
+  const player1Name = player1Inut || "player 1";
+  const player2Name = player2Input || "player 2";
+  document.getElementById("p1").innerHTML = `<img src="gon.jpeg" class="image_icon"> ${player1Name}: <div id="score1">0 </div>`;
+  document.getElementById("p2").innerHTML = `<img src="killua.jpeg"class="image_icon" > ${player2Name}: <div id="score2">0</div>`;
+  document.querySelector(".input_names").style.display = "none";
 }
-
 document.getElementById("startBtn").addEventListener("click", getPlayerNames)
-
 
 function Update_Info(){
   document.getElementById("score1").textContent= player1score;
