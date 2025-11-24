@@ -9,30 +9,44 @@ body {
   flex-direction: column;
   position: relative;
 }
-
 .wrapper {
   background: #C4C4C4;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  width: 200px;
-  height: 200px;
-  gap: 10px;
+  display: grid;
+  gap: 10px; 
   padding: 0;
+  margin-top: 20px;
+  list-style: none;
+}
+
+
+.cards.grid-normal {
+  grid-template-columns: repeat(4, 1fr);
+  width: 350px; 
+}
+
+
+.cards.grid-hard {
+  grid-template-columns: repeat(8, 1fr);
+  width: 700px;
 }
 
 .card {
-  width: calc(25% - 10px);
-  height: calc(25% - 10px);
   background: #fff;
   border-radius: 7px;
-  list-style: none;
   cursor: pointer;
   position: relative;
+  height: 80px; 
+  perspective: 1000px; 
 }
 
 .view {
@@ -68,13 +82,16 @@ body {
   font-size: 1.2em;
   color: rgb(0, 0, 0);
 }
+
 .player {
   background: #c01e1e;
   padding: 10px 20px;
   border-radius: 5px;
   border: solid 2px #000;
 }
-#score1, #score2 {
+
+#score1,
+#score2 {
   font-size: 1.5em;
   margin-top: 5px;
   text-align: center;
@@ -85,13 +102,14 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.image_icon{
+
+.image_icon {
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
 
-.Winner{
+.Winner {
   display: none;
   position: absolute;
   top: 50%;
@@ -110,12 +128,14 @@ body {
 
 
 }
-.show{
+
+.show {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
 }
-.input_names{ 
+
+.input_names {
   background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
@@ -124,15 +144,17 @@ body {
   inset: 0;
   z-index: 100;
 }
-.input_content{
-  background:red;
+
+.input_content {
+  background: red;
   padding: 30px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-#startBtn{
+
+#startBtn {
   padding: 10px;
   border-radius: 5px;
   border: none;
@@ -141,9 +163,25 @@ body {
   font-size: 1em;
   cursor: pointer;
 }
-#player1, #player2{
+
+#player1,
+#player2 {
   padding: 10px;
   border-radius: 5px;
   border: none;
   font-size: 1em;
+}
+
+#startBtn:hover {
+  background: #514ed9;
+}
+
+#Levels {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background: #91dd17;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
 }
