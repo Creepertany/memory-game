@@ -17,6 +17,12 @@
     <input type="text" id="player2" placeholder="Enter Player 2 Name ">
     <input type="text" id="player1" placeholder="Enter Player 1 Name">
     <button id="startBtn"> Start Game </button>
+    
+    <select id="Levels">
+      <option id="easy">Easy</option>
+      <option id="medium">Medium</option>
+      <option id="hard">Hard</option>
+    </select>
     </div>
   </div>
 
@@ -32,73 +38,10 @@
   <div class="Winner"> 
     <h4>Congratulation Player <span class="Winner_player">1</span>  You won with <span class="score_winner">0</span>  points</h4>
   </div>
-  <div class="wrapper">
+  <div class="wrapper" id="wrap">
     <h1> Memory Game </h1>
-    <ul class="cards">
-      <li class="card">
-        <div class="view back-view">🍎</div>
-        <div class="view front-view">?</div>
-      </li>
-
-      <li class="card">
-        <div class="view back-view">🍎</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">🍏​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">🍏​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">🥝​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">​🍉​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">​🍉​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">🍍​</div>
-        <div class="view front-view">?</div>
-      <li class="card">
-        <div class="view back-view">🍍​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">🌽​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">🌽​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">🍓​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">🍓​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">🍒​</div>
-        <div class="view front-view">?</div>
-      </li>
-      <li class="card">
-        <div class="view back-view">🍒​</div>
-        <div class="view front-view">?</div>
-      <li class="card">
-        <div class="view back-view">🥝​</div>
-        <div class="view front-view">?</div>
-      </li>
-    </ul>
+    
+    <ul class="cards"> </ul>
 </div>
 <button id="resetBtn"> Reset Game </button>
     <script src="scirpt.js"></script>
