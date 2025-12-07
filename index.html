@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="voewport" content="width=device-width, initial-scale=2.0" />
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="style.css " />
+  </head>
 
-<head>
-
-
-  <meta charset="UTF-8">
-  <meta name="voewport" content="width=device-width, initial-scale=2.0">
-  <title> Memory Game </title>
-  <link rel="stylesheet" href="style.css " />
-
-</head>
-
-<body>
+  <body>
     <div class="input_names">
-    <div class="input_content">
-    <input type="text" id="player2" placeholder="Enter Player 2 Name ">
-    <input type="text" id="player1" placeholder="Enter Player 1 Name">
-    <button id="startBtn"> Start Game </button>
-    
-    <select id="Levels">
-      <option id="easy">Easy</option>
-      <option id="medium">Medium</option>
-      <option id="hard">Hard</option>
-    </select>
-    </div>
-  </div>
+      <div class="input_content">
+        <input type="text" id="player2" placeholder="Enter Player 2 Name " />
+        <input type="text" id="player1" placeholder="Enter Player 1 Name" />
+        <button id="startBtn">Start Game</button>
 
-  
-  <div class="player-info">
-    <div id="p1" class="player"><img src="gon.jpeg" class="image_icon">  Player 1:<div id="score1">0 </div>
+        <select id="Levels">
+          <option id="easy">Easy</option>
+          <option id="medium">Medium</option>
+          <option id="hard">Hard</option>
+        </select>
+      </div>
     </div>
-    <div class="current">Current Turn:Player <div id="currentPlayer">1</div>
-    </div>
-    <div id="p2" class="player"><img src="killua.jpeg"class="image_icon" > Player 2:<div id="score2">0</div>
-    </div>
-  </div>
-  <div class="Winner"> 
-    <h4>Congratulation Player <span class="Winner_player">1</span>  You won with <span class="score_winner">0</span>  points</h4>
-  </div>
-  <div class="wrapper" id="wrap">
-    <h1> Memory Game </h1>
-    
-    <ul class="cards"> </ul>
-</div>
-<button id="resetBtn"> Reset Game </button>
-    <script src="scirpt.js"></script>
-</body>
 
+    <div class="player-info">
+      <div id="p1" class="player">
+        <img src="gon.jpeg" class="image_icon" /> Player 1:
+        <div id="score1">0</div>
+      </div>
+      <div class="current">
+        Current Turn:Player
+        <div id="currentPlayer">1</div>
+      </div>
+      <div id="p2" class="player">
+        <img src="killua.jpeg" class="image_icon" /> Player 2:
+        <div id="score2">0</div>
+      </div>
+    </div>
+    <div class="Winner">
+      <h4>
+        Congratulation Player <span class="Winner_player">1</span> You won with
+        <span class="score_winner">0</span> points
+      </h4>
+      <button id="TheresetBtn">Reset</button>
+    </div>
+    <div class="wrapper" id="wrap">
+      <h1>Memory Game</h1>
+
+      <ul class="cards"></ul>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>
