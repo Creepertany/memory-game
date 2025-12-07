@@ -1,4 +1,4 @@
- let matchedPairs = 0;
+let matchedPairs = 0;
 let cardOne = null;
 let cardTwo = null;
 let disableDeck = false;
@@ -205,7 +205,24 @@ function showWinCard() {
   winnerDiv.classList.add("show");
 }
 function resetTheGame() {
+  matchedPairs = 0;
+  cardOne = null;
+  cardTwo = null;
+  disableDeck = false;
+  player1score = 0;
+  player2score = 0;
+  currentPlayer = 1;
+  winnerPlayer = null;
+  winnerscore = null;
+  level = "easy";
+  totalpairs = 8;
 
-  
+  resetGame();
+  Update_Info();
+
+  document.getElementById("player1").value = "";
+  document.getElementById("player2").value = "";
+  document.querySelector(".Winner").classList.remove("show");
+  document.querySelector(".input_names").style.display = "flex";
 }
-document.getElementById("resetBtn").addEventListener("click", resetTheGame)
+document.getElementById("TheresetBtn").addEventListener("click", resetTheGame);
